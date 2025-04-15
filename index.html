@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
+    <h1 class="text-2xl font-bold mb-4">Bookmark Manager</h1>
+    <form id="bookmark-form" class="space-y-4">
+      <input type="text" id="title" placeholder="Title" class="w-full p-2 border rounded" required />
+      <input type="url" id="url" placeholder="https://example.com" class="w-full p-2 border rounded" required />
+      <select id="category" class="w-full p-2 border rounded">
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+        <option value="Entertainment">Entertainment</option>
+      </select>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Bookmark</button>
+    </form>
+
+    <div class="mt-6">
+      <input type="text" id="search" placeholder="Search bookmarks..." class="w-full p-2 border rounded mb-4" />
+      <div class="flex space-x-2 mb-4">
+        <button class="filter-btn bg-gray-200 px-3 py-1 rounded" data-category="All">All</button>
+        <button class="filter-btn bg-gray-200 px-3 py-1 rounded" data-category="Work">Work</button>
+        <button class="filter-btn bg-gray-200 px-3 py-1 rounded" data-category="Study">Study</button>
+        <button class="filter-btn bg-gray-200 px-3 py-1 rounded" data-category="Entertainment">Entertainment</button>
+      </div>
+      <ul id="bookmark-list" class="space-y-2"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
